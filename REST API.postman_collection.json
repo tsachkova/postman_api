@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "e94ea6d4-69e6-4645-873c-0cf6b3a044f9",
+		"name": "REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24400893"
+	},
+	"item": [
+		{
+			"name": "get_all_drivers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "w",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "w",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "w",
+							"type": "text"
+						},
+						{
+							"key": "dateBeginWork",
+							"value": "ww",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "w",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "w",
+							"type": "text"
+						},
+						{
+							"key": "reyting",
+							"value": "w",
+							"type": "text"
+						},
+						{
+							"key": "cars",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/drivers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_new_driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cars\":[\"1\"],\"firstName\":\"w\",\"lastName\":\"q\",\"age\":\"q\",\"dateBeginWork\":\"q\",\"city\":\"q\",\"phone\":\"q\",\"reyting\":\"q\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}drivers",
+					"host": [
+						"{{url}}drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\": \"vasya\", \"password\": \"qqq\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_driver_for_lastname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}drivers:Jhons",
+					"host": [
+						"{{url}}drivers"
+					],
+					"port": "Jhons"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_driver",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cars\":[\"1\"],\"firstName\":\"Ted\",\"lastName\":\"Jhons\",\"age\":\"45\",\"dateBeginWork\":\"12.12.2012\",\"city\":\"Kharkiv\",\"phone\":\"888888\",\"reyting\":\"10\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}drivers :a3571234-d041-4733-81f7-9e72640dfff3",
+					"host": [
+						"{{url}}drivers "
+					],
+					"port": "a3571234-d041-4733-81f7-9e72640dfff3"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firm\":\"Renaute\",\"model\":\"Scenic\",\"year\":\"2003\",\"class\":\"standart\",\"number\":\"ax2222ai\",\"owner\":\"Jhons\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}cars/",
+					"host": [
+						"{{url}}cars"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_car_for_number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cars:ax2222ai",
+					"host": [
+						"{{url}}cars"
+					],
+					"port": "ax2222ai"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_car",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firm\":\"Renaute\",\"model\":\"Scenic\",\"year\":\"2003\",\"class\":\"econom\",\"number\":\"ax2222ai\",\"owner\":\"Taxi\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}cars:41da9a93-3e46-4de9-b8c4-ba065425d72c",
+					"host": [
+						"{{url}}cars"
+					],
+					"port": "41da9a93-3e46-4de9-b8c4-ba065425d72c"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_driver",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}drivers :a3571234-d041-4733-81f7-9e72640dfff3",
+					"host": [
+						"{{url}}drivers "
+					],
+					"port": "a3571234-d041-4733-81f7-9e72640dfff3"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}cars:41da9a93-3e46-4de9-b8c4-ba065425d72c",
+					"host": [
+						"{{url}}cars"
+					],
+					"port": "41da9a93-3e46-4de9-b8c4-ba065425d72c"
+				}
+			},
+			"response": []
+		}
+	]
+}
